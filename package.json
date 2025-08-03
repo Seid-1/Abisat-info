@@ -11,7 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^2.2.0",
+<<<<<<< HEAD
     "dotenv": "^17.2.1",
+=======
+>>>>>>> 67280f3cda9030b65e0cbbc7ff07f05871ec6c1c
     "express": "^5.1.0",
     "express-fileupload": "^1.5.2",
     "express-flash": "^0.0.2",
