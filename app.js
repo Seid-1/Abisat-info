@@ -432,5 +432,7 @@ app.post("/admin/posts/delete/:id", async (req, res) => {
     res.status(500).send("Failed to delete post");
   }
 });
-
-app.listen(3000);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
