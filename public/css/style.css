@@ -1,0 +1,278 @@
+.custom-navbar {
+  background: rgba(20, 20, 30, 0.85);
+  backdrop-filter: saturate(180%) blur(10px);
+  transition: background-color 0.3s ease;
+}
+.custom-navbar .nav-link-custom {
+  position: relative;
+  padding-bottom: 0.25rem;
+  transition: color 0.3s ease;
+}
+.custom-navbar .nav-link-custom::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #f7b733;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+.custom-navbar .nav-link-custom:hover,
+.custom-navbar .nav-link-custom.active {
+  color: #f7b733 !important;
+}
+.custom-navbar .nav-link-custom:hover::after,
+.custom-navbar .nav-link-custom.active::after {
+  width: 100%;
+}
+.navbar-toggler {
+  filter: invert(1);
+}
+body {
+  background: linear-gradient(135deg, #0d1b2a, #1b263b);
+  color: #e0e0e0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.hero-section {
+  background: linear-gradient(
+      to right,
+      rgba(15, 32, 39, 0.85),
+      rgba(44, 83, 100, 0.85)
+    ),
+    url("/images/hero-bg.jpg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px 80px;
+  margin-top: 70px;
+  position: relative;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.hero-section h1 {
+  font-weight: 700;
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+.hero-section p {
+  margin-top: 1rem;
+  font-weight: 500;
+  font-size: 1.3rem;
+  letter-spacing: 0.02em;
+  text-shadow: 1.5px 1.5px 5px rgba(0, 0, 0, 0.65);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-section .btn {
+  margin-top: 2rem;
+  padding: 0.75rem 2.5rem;
+  border-radius: 50px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-section .btn:hover,
+.hero-section .btn:focus {
+  background-color: #ffc107;
+  box-shadow: 0 0.7rem 1.5rem rgba(255, 193, 7, 0.6);
+  color: #212529;
+}
+.brand-card {
+  background: #1e2a47;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+.brand-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(255, 204, 51, 0.6);
+}
+.brand-card img {
+  background: white;
+  padding: 1.5rem;
+  height: 180px;
+  object-fit: contain;
+  width: 100%;
+  border-bottom: 1px solid #ffcc33;
+  transition: filter 0.3s ease;
+}
+.brand-card:hover img {
+  filter: drop-shadow(0 0 10px #ffcc33);
+}
+.brand-card .card-body {
+  text-align: center;
+  padding: 1.5rem 1.25rem;
+}
+.brand-card h5 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffd54f;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.brand-card p {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.brand-card .btn-outline-primary {
+  border-color: #ffd54f;
+  color: #ffd54f;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.brand-card .btn-outline-primary:hover {
+  background-color: #ffd54f;
+  color: #1a1a1a;
+}
+.brand-card .btn-primary {
+  background-color: #d97706;
+  border-color: #d97706;
+  font-weight: 600;
+}
+.brand-card .btn-primary:hover {
+  background-color: #b35c04;
+  border-color: #b35c04;
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  .brand-card img {
+    height: 140px;
+    padding: 1rem;
+  }
+}
+.channel-list-section {
+  background: linear-gradient(
+      to right,
+      rgba(15, 32, 39, 0.9),
+      rgba(44, 83, 100, 0.9)
+    ),
+    url("/images/hero-bg.jpg") center/cover no-repeat;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  min-height: 100vh;
+}
+
+.sat-card {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.sat-card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+.bg_color {
+  background-color: #1a2b3c;
+  border-left: 4px solid #00bcd4;
+  transition: transform 0.3s ease;
+}
+
+.bg_color:hover {
+  transform: translateY(-5px);
+}
+
+mark {
+  background-color: #ffecb3;
+  color: #000;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+.sat-section {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  background: linear-gradient(
+      to right,
+      rgba(15, 32, 39, 0.95),
+      rgba(44, 83, 100, 0.95)
+    ),
+    url("/images/hero-bg.jpg") center/cover no-repeat;
+  clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+  z-index: 1;
+}
+.contact-section {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  background: linear-gradient(
+      to right,
+      rgba(15, 32, 39, 0.95),
+      rgba(44, 83, 100, 0.95)
+    ),
+    url("/images/hero-bg.jpg") center/cover no-repeat;
+  clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0% 100%);
+  z-index: 1;
+}
+.dark-input {
+  background-color: #2c3e50;
+  color: #fff;
+  border: 1px solid #3d566e;
+}
+.dark-input::placeholder {
+  color: #bbb;
+}
+table.table tbody tr {
+  background-color: #2c2f38 !important;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  display: table-row;
+  color: white !important;
+}
+table.table tbody tr td {
+  background-color: transparent !important;
+  border: none !important;
+  vertical-align: middle;
+  color: white !important;
+}
+table.table thead tr {
+  background-color: #1f2330;
+}
+table.table thead th {
+  background-color: transparent !important;
+  border: none !important;
+  color: #0dcaf0 !important;
+}
+table.table {
+  color: white;
+}
+.mt-navbar-offset {
+  margin-top: 70px;
+}
+
+.navbar .dropdown-menu {
+  background-color: #343a40;
+  border: 1px solid #454d55;
+}
+.navbar .dropdown-item {
+  color: #fff;
+}
+.navbar .dropdown-item:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.navbar .dropdown-item:active {
+  background-color: #0056b3;
+}
+.navbar .dropdown-toggle {
+  color: white;
+}
