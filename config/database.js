@@ -9,4 +9,14 @@ const pool = mysql2.createPool({
   port: process.env.DB_PORT || 3306,
 });
 
+// Test connection when this file is loaded
+pool.getConnection((err, connection) => {
+  if (err) {
+    console.error("❌ MySQL connection failed:", err.message);
+  } else {
+    console.log("✅ Connected to MySQL database");
+    connection.release();
+  }
+});
+
 module.exports = pool.promise();
